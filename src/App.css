@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.image{
+    width: 400px !important;
+    height: 400px !important;
+}
