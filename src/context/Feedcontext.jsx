@@ -28,7 +28,6 @@ export function FeedProvider({ children }) {
 
    setFeeds(updatedFeeds);
 
-   // Save only user-created feeds in local storage
    localStorage.setItem(
      "userFeeds",
      JSON.stringify(updatedFeeds.filter((feed) => feed.username === "You"))

@@ -27,7 +27,6 @@ export default function InstagramFeed() {
         }));
         const savedFeeds = JSON.parse(localStorage.getItem("userFeeds")) || [];
 
-        // Merge API feeds with locally stored feeds
         setFeeds([...savedFeeds, ...formattedFeeds]);
 
         setLikes(randomLikes);
