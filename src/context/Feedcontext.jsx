@@ -34,7 +34,9 @@ export function FeedProvider({ children }) {
    );
  };
  const deleteFeed = (id) => {
-   setFeeds((prevFeeds) => prevFeeds.filter((feed) => feed.id !== id));
+   const updatedFeeds = feeds.filter((feed) => feed.id !== id);
+   setFeeds(updatedFeeds);
+   localStorage.setItem("userFeeds", JSON.stringify(updatedFeeds)); // Update localStorage
  };
 
   const toggleLike = (id) => {
